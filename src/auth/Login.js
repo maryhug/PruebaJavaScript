@@ -82,10 +82,12 @@ export function renderLogin() {
 
     // Event listeners
     document.getElementById('loginForm').addEventListener('submit', handleLogin);
-    document.getElementById('signupLink').addEventListener('click', (e) => {
+// Replace the non-existent id listener with:
+    document.querySelector('.form__footer a[href="/register"]').addEventListener('click', (e) => {
         e.preventDefault();
         router.navigate('/register');
     });
+
 }
 
 async function handleLogin(e) {
@@ -104,7 +106,6 @@ async function handleLogin(e) {
 
         if (result.success) {
             showNotification('Login successful! Welcome back.', 'success');
-
             setTimeout(() => {
                 if (result.user.role === 'admin') {
                     router.navigate('/admin');
@@ -114,11 +115,13 @@ async function handleLogin(e) {
             }, 500);
         } else {
             showNotification(result.message || 'Login failed', 'error');
+            e.target.reset();  // ← Agrega esta línea para limpiar campos
             btn.disabled = false;
             btn.textContent = 'Sign In';
         }
     } catch (error) {
         showNotification('An error occurred. Please try again.', 'error');
+        e.target.reset();  // ← También aquí por si hay error de red
         btn.disabled = false;
         btn.textContent = 'Sign In';
     }

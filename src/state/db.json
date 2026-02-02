@@ -3,20 +3,50 @@
     {
       "id": "1",
       "fullName": "Admin User",
-      "email": "admin@eventapp.com",
+      "email": "admin@admin.com",
       "password": "admin123",
       "role": "admin"
     },
     {
       "id": "2",
-      "fullName": "Guest User",
-      "email": "guest@eventapp.com",
-      "password": "guest123",
-      "role": "guest"
+      "fullName": "Regular User",
+      "email": "user@test.com",
+      "password": "user123",
+      "role": "user"
     }
   ],
-  "events": [
-  ],
-  "registrations": [
+  "tasks": [
+    {
+      "id": "3",
+      "name": "Quarterly Review",
+      "assignee": "Michelle O.",
+      "status": "pending",
+      "priority": "low",
+      "dueDate": "2026-01-20"
+    },
+    {
+      "id": "2",
+      "name": "Quarterly Review",
+      "assignee": "Michelle O.",
+      "status": "progress",
+      "priority": "medium",
+      "dueDate": "2026-01-20"
+    },
+    {
+      "id": "1",
+      "name": "Quarterly Review",
+      "assignee": "Michelle O.",
+      "status": "completed",
+      "priority": "low",
+      "dueDate": "2026-01-20"
+    },
+    {
+      "id": "4",
+      "name": "Quarterly Review",
+      "assignee": "Michelle O.",
+      "status": "completed",
+      "priority": "high",
+      "dueDate": "2026-01-20"
+    }
   ]
 }
