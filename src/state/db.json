@@ -17,48 +17,52 @@
   ],
   "tasks": [
     {
-      "id": "3",
-      "name": "Quarterly Review",
-      "assignee": "Michelle O.",
-      "status": "pending",
-      "priority": "low",
-      "dueDate": "2026-01-20"
-    },
-    {
-      "id": "2",
-      "name": "Quarterly Review",
-      "assignee": "Michelle O.",
-      "status": "progress",
+      "id": "1002",
+      "name": "Write unit tests",
+      "category": "Computer Science",
       "priority": "medium",
-      "dueDate": "2026-01-20"
-    },
-    {
-      "id": "1",
-      "name": "Quarterly Review",
-      "assignee": "Michelle O.",
       "status": "completed",
-      "priority": "low",
-      "dueDate": "2026-01-20"
-    },
-    {
-      "id": "4",
-      "name": "Quarterly Review",
-      "assignee": "Michelle O.",
-      "status": "completed",
-      "priority": "high",
-      "dueDate": "2026-01-20"
-    },
-    {
-      "id": "1770049981342",
-      "name": "MA",
-      "category": "Physics",
-      "priority": "low",
-      "status": "progress",
-      "dueDate": "2026-02-13",
-      "description": "",
+      "dueDate": "2026-02-15",
+      "description": "Cover services and utils with Jest tests.",
       "assignee": "Maryhug Duran",
-      "createdAt": "2026-02-02T16:33:01.342Z",
-      "updatedAt": "2026-02-02T16:33:01.342Z"
+      "createdAt": "2026-02-02T09:00:00.000Z",
+      "updatedAt": "2026-02-02T17:17:59.210Z"
+    },
+    {
+      "id": "1003",
+      "name": "Prepare presentation",
+      "category": "History",
+      "priority": "low",
+      "status": "completed",
+      "dueDate": "2026-03-01",
+      "description": "Slides for the upcoming conference.",
+      "assignee": "Admin User",
+      "createdAt": "2026-01-20T14:30:00.000Z",
+      "updatedAt": "2026-02-02T17:17:07.666Z"
+    },
+    {
+      "id": "1004",
+      "name": "Database migration",
+      "category": "Mathematics",
+      "priority": "high",
+      "status": "pending",
+      "dueDate": "2026-02-20",
+      "description": "Migrate legacy data to new schema.",
+      "assignee": "Regular User",
+      "createdAt": "2026-02-02T10:15:00.000Z",
+      "updatedAt": "2026-02-02T17:17:03.674Z"
+    },
+    {
+      "id": "1770052529835",
+      "name": "Prueba",
+      "category": "Mathematics",
+      "priority": "low",
+      "status": "pending",
+      "dueDate": "2026-02-21",
+      "description": "",
+      "assignee": "Regular User",
+      "createdAt": "2026-02-02T17:15:29.835Z",
+      "updatedAt": "2026-02-02T17:17:28.506Z"
     }
   ]
 }

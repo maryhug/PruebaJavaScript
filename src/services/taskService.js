@@ -6,7 +6,8 @@ import { showNotification } from '../utils/helpers.js';
 const STATUS_FILTERS = {
     all: () => true,
     pending: task => task.status === 'pending',
-    completed: task => task.status === 'completed'
+    completed: task => task.status === 'completed',
+    progress: task => task.status === 'progress'
 };
 
 class TaskService {

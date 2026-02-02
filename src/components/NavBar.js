@@ -80,12 +80,12 @@ export function sideBar_profile() {
         <div class="sidebar__footer">
           <div class="user-info">
             <div class="mini-user__avatar"></div>
-            <div>
+            <div id="infor-mm">
               <span>${session.fullName}</span>
               <small>${session.role}</small>
             </div>
           </div>
-          <button id="logoutBtn" class="logout-btn">Logout</button>
+          <button id="logoutBtn" class="button-secondary">Logout</button>
         </div>
       </aside>
     `;

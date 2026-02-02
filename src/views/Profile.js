@@ -1,8 +1,12 @@
 import {sideBar_profile,attachNavbarListeners} from "../components/NavBar.js"
+import sessionManager from "../state/sessionManager";
+import {formatDate} from "../utils/helpers.js"
 
 export function renderProfile() {
 
     const profile = document.getElementById("app");
+    const session = sessionManager.getSession();
+
     profile.innerHTML = `
    
     <div class="dashboard">
@@ -17,15 +21,15 @@ export function renderProfile() {
             <div class="profile-card__cover"></div>
             <div class="profile-card__body">
               <div class="profile-card__avatar"></div>
-              <h2>Dr. Sarah Jenkins</h2>
-              <span class="profile-card__badge">System Admin</span>
+              <h2>${session.fullName}</h2>
+              <span class="profile-card__badge">${session.role}</span>
               <div class="profile-card__email">
                 <span class="email-icon">✉</span>
-                sarah.jenkins@crudzaso.edu
+                ${session.email}
               </div>
               <div class="profile-card__divider"></div>
               <div class="profile-card__stat">
-                <div class="profile-card__stat-value">154</div>
+                <div class="profile-card__stat-value">${session.tasks}</div>
                 <div class="profile-card__stat-label">Tasks</div>
               </div>
             </div>
@@ -41,11 +45,11 @@ export function renderProfile() {
             <div class="info-grid">
               <div>
                 <div class="info-label">Full Name</div>
-                <div class="info-value">Sarah Jenkins</div>
+                <div class="info-value"> ${session.fullName}</div>
               </div>
               <div>
                 <div class="info-label">Employee ID</div>
-                <div class="info-value">CZ-882103</div>
+                <div class="info-value"> ${session.userId}</div>
               </div>
               <div>
                 <div class="info-label">Phone</div>
@@ -63,7 +67,7 @@ export function renderProfile() {
               </div>
               <div>
                 <div class="info-label">Join Date</div>
-                <div class="info-value">September 14, 2020</div>
+                <div class="info-value">${session.loginTime}</div>
               </div>
             </div>
           </article>

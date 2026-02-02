@@ -1,7 +1,7 @@
 import sessionManager from '../state/sessionManager.js';
 import taskService from '../services/taskService.js';
 import router from "../router/Router.js";
-import { sideBar_dash, attachNavbarListeners } from "../components/NavBar.js";  // ← IMPORTA FUNCIONES
+import { sideBar_dash, attachNavbarListeners } from "../components/NavBar.js";
 
 export async function renderDashboard() {
     const dashboard = document.getElementById('app');
@@ -19,7 +19,7 @@ export async function renderDashboard() {
 
         dashboard.innerHTML = `
             <div class="dashboard">
-                ${sideBar_dash()}  <!-- ← Usa sideBar_dash con session interna -->
+                ${sideBar_dash()}
                 <main class="main">                       
                     <section class="hero">
                         <div>
