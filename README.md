@@ -1,7 +1,3 @@
-- Token:
-  - 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
-
-
 - Front
   - https://www.figma.com/design/K3PmKIOlfEsjnbwP54Yc2x/Sin-t%C3%ADtulo?node-id=33-2&p=f
 
