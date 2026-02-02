@@ -5,80 +5,82 @@ export function renderRegister() {
     const app = document.getElementById('app');
 
     app.innerHTML = `
-        <div class="auth-container">
-            <div class="auth-card">
-            
-                <h1 class="auth-title">Create Account</h1>
-                <p class="auth-subtitle">Join the academic performance platform today</p>
-                
-                <form id="registerForm" class="auth-form">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <div class="input-wrapper">
-                            <input 
-                                type="text" 
-                                id="fullName" 
-                                name="fullName"
-                                placeholder="John Doe"
-                                required
-                            >
-                        </div>
-                        <span class="error-message" id="nameError"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <div class="input-wrapper">
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email"
-                                placeholder="student@university.edu"
-                                required
-                            >
-                        </div>
-                        <span class="error-message" id="emailError"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="input-wrapper">
-                            <input 
-                                type="password" 
-                                id="password" 
-                                name="password"
-                                placeholder="Create a password"
-                                required
-                            >
-                        </div>
-                        <span class="error-message" id="passwordError"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Confirm password</label>
-                        <div class="input-wrapper">
-                            <input 
-                                type="password" 
-                                id="confirm-password" 
-                                name="password"
-                                placeholder="Confirm password"
-                                required
-                            >
-                        </div>
-                        <span class="error-message" id="passwordError"></span>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-block">
-                        Register
-                    </button>
-                </form>
-                
-                <p class="auth-footer">
-                    Already have an account? 
-                    <a href="#" id="loginLink" class="auth-link">Sign in</a>
-                </p>
-            </div>
-        </div>      
+     <main class="page">
+      <section class="login">
+        <header class="brand">
+          <div class="brand__logo" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" aria-label="Logo">
+              <rect x="4" y="4" width="40" height="40" rx="10" />
+              <path
+                d="M20 14c4 2 6 6 6 10s-2 8-6 10M28 14c4 2 6 6 6 10s-2 8-6 10"
+                fill="none"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="24" cy="24" r="3.5" />
+            </svg>
+          </div>
+          <div class="brand__name">CRUDZASO</div>
+        </header>
+
+        <article class="card">
+          <h1>Create account</h1>
+          <p class="card__subtitle">
+            Join the academic performance platform today
+          </p>
+
+          <form class="form" action="#">
+            <label class="field">
+              <span>Full Name</span>
+              <input
+                type="text"
+                name="full-name"
+                placeholder="John Doe"
+                autocomplete="name"
+              />
+            </label>
+
+            <label class="field">
+              <span>Email address</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="student@university.edu"
+                autocomplete="email"
+              />
+            </label>
+
+            <label class="field">
+              <span>Password</span>
+              <input
+                type="password"
+                name="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+              />
+            </label>
+
+            <label class="field">
+              <span>Confirm Password</span>
+              <input
+                type="password"
+                name="confirm-password"
+                placeholder="Confirm password"
+                autocomplete="new-password"
+              />
+            </label>
+
+            <button class="primary" type="submit">Register</button>
+
+            <p class="form__footer">
+              Already have an account?
+              <a class="link" href="/login">Sign in</a>
+            </p>
+          </form>
+        </article>
+      </section>
+    </main>
+    
     `;
 
     // Event listeners

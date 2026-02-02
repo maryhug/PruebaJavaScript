@@ -6,54 +6,78 @@ export function renderLogin() {
     const app = document.getElementById('app');
 
     app.innerHTML = `
-        <div class="auth-container">
-            <div class="auth-card">
-                
-                <h1 class="auth-title">Welcome Back</h1>
-                <p class="auth-subtitle">Enter your credentials to access the platform</p>
-                
-                <form id="loginForm" class="auth-form">
-                    <div class="form-group">
-                        <label for="email">Email or username</label>
-                        <div class="input-wrapper">
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email"
-                                placeholder="student@university.edu"
-                                required
-                            >
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="input-wrapper">
-                            <input 
-                                type="password" 
-                                id="password" 
-                                name="password"
-                                placeholder="Enter your password"
-                                required
-                            >
-                            <span class="input-icon">
-                                <i class="fa-solid fa-eye eye-icon"></i>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-block">
-                        Sign In
-                    </button>
-                </form>
-                
-                <p class="auth-footer">
-                    Don't have an account? 
-                    <a href="#" id="signupLink" class="auth-link">Sign up</a>
-                </p>
-                
+   <main class="page">
+      <section class="login">
+        <header class="brand">
+          <div class="brand__logo" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" aria-label="Logo">
+              <rect x="4" y="4" width="40" height="40" rx="10" />
+              <path
+                d="M20 14c4 2 6 6 6 10s-2 8-6 10M28 14c4 2 6 6 6 10s-2 8-6 10"
+                fill="none"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="24" cy="24" r="3.5" />
+            </svg>
+          </div>
+          <div class="brand__name">CRUDZASO</div>
+        </header>
+
+        <article class="card">
+          <h1>Welcome back</h1>
+          <p class="card__subtitle">
+            Enter your credentials to access the platform
+          </p>
+
+          <form class="form" action="/dashboard">
+            <label class="field">
+              <span>Email or username</span>
+              <input
+                type="text"
+                name="email"
+                placeholder="student@university.edu"
+                autocomplete="username"
+              />
+            </label>
+
+            <label class="field">
+              <span>Password</span>
+              <div class="field__control">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="••••••••"
+                  autocomplete="current-password"
+                />
+                <button class="icon-button" type="button" aria-label="Show password">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"
+                      fill="none"
+                      stroke-width="1.7"
+                      stroke-linejoin="round"
+                    />
+                    <circle cx="12" cy="12" r="3.2" />
+                  </svg>
+                </button>
+              </div>
+            </label>
+
+            <div class="form__row">
+              <a class="link" href="#">Forgot password?</a>
             </div>
-        </div>
+
+            <button class="primary" type="submit">Sign in</button>
+
+            <p class="form__footer">
+              Don't have an account?
+              <a class="link" href="/register">Register</a>
+            </p>
+          </form>
+        </article>
+      </section>
+    </main>
     `;
 
     // Event listeners
