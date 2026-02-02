@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "json-server": "^1.0.0-beta.5"
+  },
+  "name": "pruebajavascript",
+  "version": "1.0.0",
+  "description": "- Token:",
+  "main": "index.js",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "server": "json-server --watch src/state/db.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryhug/PruebaJavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryhug/PruebaJavaScript/issues"
+  },
+  "homepage": "https://github.com/maryhug/PruebaJavaScript#readme"
+}
