@@ -20,7 +20,7 @@ export function renderDashboard() {
                         <h1>Task Manager</h1>
                         <p>Overview of your current academic performance tasks.</p>
                     </div>
-                    <a class="primary primary--small" href="/createtaks">+ New Task</a>
+                    <a class="primary primary--small" href="/create-task">+ New Task</a>
                 </section>
         
                 <section class="stats">

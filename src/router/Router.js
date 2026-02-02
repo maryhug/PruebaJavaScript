@@ -17,7 +17,7 @@ class Router {
         const session = JSON.parse(localStorage.getItem('session'));
 
         // Protected routes
-        const protectedRoutes = ['/dashboard', '/events', '/admin'];
+        const protectedRoutes = ['/dashboard', '/profile', '/admintaks', 'create-task'];
         const authRoutes = ['/login', '/register'];
 
         if (protectedRoutes.includes(path) && !session) {

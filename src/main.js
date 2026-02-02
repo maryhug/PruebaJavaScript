@@ -13,8 +13,8 @@ router.register('/login', renderLogin);
 router.register('/register', renderRegister);
 router.register('/dashboard', renderDashboard);
 router.register('/profile', renderProfile);
-router.register('/admintaks', renderTask);
-router.register('/createtaks', renderCreateTask);
+router.register('/taks', renderTask);
+router.register('/create-task', renderCreateTask);
 
 // Initialize app
 function initApp() {

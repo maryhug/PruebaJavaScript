@@ -30,7 +30,7 @@ export function renderLogin() {
             Enter your credentials to access the platform
           </p>
 
-          <form class="form" action="/dashboard">
+          <form id="loginForm" class="form" action="/dashboard">
             <label class="field">
               <span>Email or username</span>
               <input
