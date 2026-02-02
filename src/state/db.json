@@ -1,1 +1,22 @@
-{}
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Admin User",
+      "email": "admin@eventapp.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "fullName": "Guest User",
+      "email": "guest@eventapp.com",
+      "password": "guest123",
+      "role": "guest"
+    }
+  ],
+  "events": [
+  ],
+  "registrations": [
+  ]
+}

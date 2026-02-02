@@ -1,12 +1,20 @@
 import router from "./router/Router.js";
-import sessionManager from "./services/sessionManager";
+import sessionManager from "./state/sessionManager";
 
 import { renderRegister } from "./auth/Register";
 import { renderLogin } from './auth/Login.js'
+import { renderDashboard } from "./views/Dashboard.js"
+import { renderProfile } from "./views/Profile";
+import {renderTask} from "./views/Task";
+import {renderCreateTask} from "./views/CreateTask";
+
 
 router.register('/login', renderLogin);
 router.register('/register', renderRegister);
-
+router.register('/dashboard', renderDashboard);
+router.register('/profile', renderProfile);
+router.register('/admintaks', renderTask);
+router.register('/createtaks', renderCreateTask);
 
 // Initialize app
 function initApp() {
@@ -18,9 +26,9 @@ function initApp() {
         router.navigate('/login');
     } else if (session && (currentPath === '/login' || currentPath === '/register' || currentPath === '/')) {
         if (session.role === 'admin') {
-            router.navigate('/admin');
+            router.navigate('/dashboard');
         } else {
-            router.navigate('/events');
+            router.navigate('/dashboard');
         }
     } else if (currentPath === '/') {
         router.navigate('/login');

@@ -7,23 +7,19 @@ export function renderRegister() {
     app.innerHTML = `
         <div class="auth-container">
             <div class="auth-card">
-                <div class="auth-logo">
-                    <div class="logo-icon">📅</div>
-                </div>
-                
+            
                 <h1 class="auth-title">Create Account</h1>
-                <p class="auth-subtitle">Join our event platform</p>
+                <p class="auth-subtitle">Join the academic performance platform today</p>
                 
                 <form id="registerForm" class="auth-form">
                     <div class="form-group">
                         <label for="fullName">Full Name</label>
                         <div class="input-wrapper">
-                            <span class="input-icon">👤</span>
                             <input 
                                 type="text" 
                                 id="fullName" 
                                 name="fullName"
-                                placeholder="Enter your full name"
+                                placeholder="John Doe"
                                 required
                             >
                         </div>
@@ -33,12 +29,11 @@ export function renderRegister() {
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <div class="input-wrapper">
-                            <span class="input-icon">📧</span>
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email"
-                                placeholder="name@example.com"
+                                placeholder="student@university.edu"
                                 required
                             >
                         </div>
@@ -48,12 +43,11 @@ export function renderRegister() {
                     <div class="form-group">
                         <label for="password">Password</label>
                         <div class="input-wrapper">
-                            <span class="input-icon">🔒</span>
                             <input 
                                 type="password" 
                                 id="password" 
                                 name="password"
-                                placeholder="Min. 6 characters"
+                                placeholder="Create a password"
                                 required
                             >
                         </div>
@@ -61,18 +55,21 @@ export function renderRegister() {
                     </div>
                     
                     <div class="form-group">
-                        <label for="role">Select Role</label>
+                        <label for="password">Confirm password</label>
                         <div class="input-wrapper">
-                            <span class="input-icon">🔑</span>
-                            <select id="role" name="role" required>
-                                <option value="guest">Guest</option>
-                                <option value="admin">Admin</option>
-                            </select>
+                            <input 
+                                type="password" 
+                                id="confirm-password" 
+                                name="password"
+                                placeholder="Confirm password"
+                                required
+                            >
                         </div>
+                        <span class="error-message" id="passwordError"></span>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block">
-                        Create Account
+                        Register
                     </button>
                 </form>
                 
@@ -81,7 +78,7 @@ export function renderRegister() {
                     <a href="#" id="loginLink" class="auth-link">Sign in</a>
                 </p>
             </div>
-        </div>
+        </div>      
     `;
 
     // Event listeners

@@ -1,4 +1,6 @@
 import router from "../router/Router";
+import {showNotification} from "../utils/helpers.js"
+import authService from "../services/authService.js";
 
 export function renderLogin() {
     const app = document.getElementById('app');
@@ -50,14 +52,50 @@ export function renderLogin() {
                     <a href="#" id="signupLink" class="auth-link">Sign up</a>
                 </p>
                 
-                <p class="auth-credits">Roadmap Academic Simulator v1.0<br>Performance monitoring active</p>
             </div>
         </div>
     `;
 
     // Event listeners
+    document.getElementById('loginForm').addEventListener('submit', handleLogin);
     document.getElementById('signupLink').addEventListener('click', (e) => {
         e.preventDefault();
         router.navigate('/register');
     });
+}
+
+async function handleLogin(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const email = formData.get('email');
+    const password = formData.get('password');
+
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Signing in...';
+
+    try {
+        const result = await authService.login(email, password);
+
+        if (result.success) {
+            showNotification('Login successful! Welcome back.', 'success');
+
+            setTimeout(() => {
+                if (result.user.role === 'admin') {
+                    router.navigate('/admin');
+                } else {
+                    router.navigate('/events');
+                }
+            }, 500);
+        } else {
+            showNotification(result.message || 'Login failed', 'error');
+            btn.disabled = false;
+            btn.textContent = 'Sign In';
+        }
+    } catch (error) {
+        showNotification('An error occurred. Please try again.', 'error');
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+    }
 }
