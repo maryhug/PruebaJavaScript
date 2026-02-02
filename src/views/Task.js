@@ -46,7 +46,7 @@ export function renderTask(){
             <h1>Task Management</h1>
             <p>View, edit, and organize all academic tasks in one place.</p>
           </div>
-          <a class="primary primary--small" href="/createtaks">+ New Task</a>
+          <a class="primary primary--small" href="/create-taks" data-route="/create-task">+ New Task</a>
         </section>
 
         <section class="stats stats--compact" id="taskStats">

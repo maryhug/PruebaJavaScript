@@ -29,7 +29,7 @@ export function renderProfile() {
               </div>
               <div class="profile-card__divider"></div>
               <div class="profile-card__stat">
-                <div class="profile-card__stat-value">${session.tasks}</div>
+                <div class="profile-card__stat-value">${session.assignee}</div>
                 <div class="profile-card__stat-label">Tasks</div>
               </div>
             </div>

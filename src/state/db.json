@@ -13,6 +13,13 @@
       "email": "user@test.com",
       "password": "user123",
       "role": "user"
+    },
+    {
+      "id": "a233",
+      "fullName": "Maryhug Duran",
+      "email": "maryhug@gmail.com",
+      "password": "cora123",
+      "role": "guest"
     }
   ],
   "tasks": [
@@ -63,6 +70,18 @@
       "assignee": "Regular User",
       "createdAt": "2026-02-02T17:15:29.835Z",
       "updatedAt": "2026-02-02T17:17:28.506Z"
+    },
+    {
+      "id": "1770053764985",
+      "name": "Prueba 2",
+      "category": "Computer Science",
+      "priority": "low",
+      "status": "progress",
+      "dueDate": "2026-02-07",
+      "description": "",
+      "assignee": "Maryhug Duran",
+      "createdAt": "2026-02-02T17:36:04.985Z",
+      "updatedAt": "2026-02-02T17:36:04.985Z"
     }
   ]
 }
