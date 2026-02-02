@@ -1,9 +1,9 @@
-import sessionManager from "../state/sessionManager.js";  // ← IMPORTA AQUÍ
-import router from "../router/Router.js";  // Para navegación
-import { showNotification } from "../utils/helpers.js";  // Para logout
+import sessionManager from "../state/sessionManager.js";
+import router from "../router/Router.js";
+import { showNotification } from "../utils/helpers.js";
 
 export function sideBar_dash() {
-    const session = sessionManager.getSession();  // ← LOCAL A ESTA FUNCIÓN
+    const session = sessionManager.getSession();
     if (!session) return '<div>No session</div>';
 
     return `
